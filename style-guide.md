@@ -24,9 +24,9 @@ The designs were created to the following widths:
 
 ### Body Copy
 
-- Font size: 15px
+- Font size: 15px Listo
 
 ### Font
 
-- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- Weight: 700
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat) Listo
+- Weight: 700 Listo
