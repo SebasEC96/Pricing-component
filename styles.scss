@@ -44,6 +44,7 @@ body {
   right: 0px;
   top: 0px;
   z-index: -1;
+  max-height: 100vh;
 }
 
 .bg-bottom {
@@ -143,6 +144,11 @@ body {
         border-radius: 0.25rem;
         padding: 0.75rem;
         width: 100%;
+
+        &:focus {
+          outline: 0;
+          border: 1px solid $dark-grayish-blue;
+        }
       }
     }
     // Applies only to the basic and master plan
@@ -164,7 +170,12 @@ body {
           background: white;
           color: $purpleish;
           border: 1px solid $purpleish;
-          border-radius: 0.5rem;
+          border-radius: 0.25rem;
+        }
+
+        &:active {
+          background: $button-gradient;
+          color: $very-light-grayish-blue;
         }
       }
     }
@@ -195,8 +206,13 @@ body {
         &:hover {
           background: $button-gradient;
           color: $very-light-grayish-blue;
-          border: 1px solid $purpleish;
-          border-radius: 0.5rem;
+          border: 1px solid $very-light-grayish-blue;
+          border-radius: 0.25rem;
+        }
+
+        &:active {
+          background: $very-light-grayish-blue;
+          color: $purpleish;
         }
       }
     }
@@ -222,6 +238,10 @@ body {
     height: auto;
   }
 
+  .bg-bottom {
+    display: none;
+  }
+
   .pricing-section {
     margin: 1rem;
 
@@ -233,11 +253,9 @@ body {
       display: flex;
       flex-direction: column;
       text-align: center;
-
-      .plan {
-        margin-left: 0;
-        margin-right: 0;
-      }
+    }
+    .plan {
+      margin: 1rem 0;
     }
   }
 }
@@ -259,13 +277,10 @@ body {
           font-size: 0.7rem;
           color: $light-grayish-blue;
         }
-
-        .switch {
-          margin: 0 1rem;
-        }
       }
     }
     .all-plans {
+      height: 20rem;
       .plan {
         width: 14rem;
         height: 18rem;
@@ -288,15 +303,18 @@ body {
         }
 
         button {
-          &:hover {
-            background: $button-gradient;
-            color: $very-light-grayish-blue;
-            border: 1px solid $purpleish;
-            border-radius: 0.5rem;
-          }
           font-size: 0.5rem;
           padding: 0.5rem;
         }
+      }
+
+      .basic,
+      .master {
+        margin: 1rem 0;
+      }
+
+      .professional {
+        height: 100%;
       }
     }
   }

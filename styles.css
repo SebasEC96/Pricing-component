@@ -19,6 +19,7 @@ body {
   right: 0px;
   top: 0px;
   z-index: -1;
+  max-height: 100vh;
 }
 
 .bg-bottom {
@@ -164,6 +165,11 @@ body {
   width: 100%;
 }
 
+.pricing-section .all-plans .plan button:focus {
+  outline: 0;
+  border: 1px solid #494c5f;
+}
+
 .pricing-section .all-plans .basic,
 .pricing-section .all-plans .master {
   background-color: white;
@@ -188,7 +194,14 @@ body {
   background: white;
   color: #696fdd;
   border: 1px solid #696fdd;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.pricing-section .all-plans .basic button:active,
+.pricing-section .all-plans .master button:active {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #f6f6fe;
 }
 
 .pricing-section .all-plans .professional {
@@ -219,8 +232,13 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(to right, #a3a8f0, #696fdd);
   color: #f6f6fe;
-  border: 1px solid #696fdd;
-  border-radius: 0.5rem;
+  border: 1px solid #f6f6fe;
+  border-radius: 0.25rem;
+}
+
+.pricing-section .all-plans .professional button:active {
+  background: #f6f6fe;
+  color: #696fdd;
 }
 
 .pricing-section .attribution p {
@@ -236,6 +254,9 @@ body {
 @media (max-width: 1024px) {
   body {
     height: auto;
+  }
+  .bg-bottom {
+    display: none;
   }
   .pricing-section {
     margin: 1rem;
@@ -253,9 +274,8 @@ body {
             flex-direction: column;
     text-align: center;
   }
-  .pricing-section .all-plans .plan {
-    margin-left: 0;
-    margin-right: 0;
+  .pricing-section .plan {
+    margin: 1rem 0;
   }
 }
 
@@ -273,8 +293,8 @@ body {
     font-size: 0.7rem;
     color: #b3b5c6;
   }
-  .pricing-section .title-switch .button-switch .switch {
-    margin: 0 1rem;
+  .pricing-section .all-plans {
+    height: 20rem;
   }
   .pricing-section .all-plans .plan {
     width: 14rem;
@@ -298,12 +318,12 @@ body {
     font-size: 0.5rem;
     padding: 0.5rem;
   }
-  .pricing-section .all-plans .plan button:hover {
-    background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
-    background: linear-gradient(to right, #a3a8f0, #696fdd);
-    color: #f6f6fe;
-    border: 1px solid #696fdd;
-    border-radius: 0.5rem;
+  .pricing-section .all-plans .basic,
+  .pricing-section .all-plans .master {
+    margin: 1rem 0;
+  }
+  .pricing-section .all-plans .professional {
+    height: 100%;
   }
 }
 
