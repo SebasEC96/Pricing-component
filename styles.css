@@ -187,6 +187,7 @@ body {
   color: #f6f6fe;
   background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(to right, #a3a8f0, #696fdd);
+  cursor: pointer;
 }
 
 .pricing-section .all-plans .basic button:hover,
@@ -226,6 +227,7 @@ body {
 .pricing-section .all-plans .professional button {
   background: #f6f6fe;
   color: #696fdd;
+  cursor: pointer;
 }
 
 .pricing-section .all-plans .professional button:hover {

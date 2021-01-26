@@ -165,6 +165,7 @@ body {
       button {
         color: $very-light-grayish-blue;
         background: $button-gradient;
+        cursor: pointer;
 
         &:hover {
           background: white;
@@ -202,6 +203,7 @@ body {
       button {
         background: $very-light-grayish-blue;
         color: $purpleish;
+        cursor: pointer;
 
         &:hover {
           background: $button-gradient;
